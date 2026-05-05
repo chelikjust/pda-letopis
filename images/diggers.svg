@@ -1,0 +1,32 @@
+<svg width="64" height="64" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- внешний круг -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#cfff9a" stroke-width="18"></circle>
+
+  <!-- шестигранная гайка -->
+  <polygon points="
+    256,110
+    356,170
+    356,342
+    256,402
+    156,342
+    156,170" fill="#cfff9a"></polygon>
+
+  <!-- внутреннее отверстие -->
+  <circle cx="256" cy="256" r="60" fill="#11170d"></circle>
+
+  <!-- насечки (чтобы выглядело как инструмент) -->
+  <rect x="250" y="110" width="12" height="40" fill="#11170d"></rect>
+  <rect x="250" y="362" width="12" height="40" fill="#11170d"></rect>
+
+  <rect x="356" y="250" width="40" height="12" fill="#11170d"></rect>
+  <rect x="116" y="250" width="40" height="12" fill="#11170d"></rect>
+
+  <!-- диагональные вырезы -->
+  <polygon points="330,160 350,180 310,190" fill="#11170d"></polygon>
+  <polygon points="182,160 162,180 202,190" fill="#11170d"></polygon>
+
+  <polygon points="330,352 350,332 310,322" fill="#11170d"></polygon>
+  <polygon points="182,352 162,332 202,322" fill="#11170d"></polygon>
+
+</svg>

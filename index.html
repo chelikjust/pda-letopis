@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>ПДА Летописца</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+function updateTime() {
+  const now = new Date();
+
+  let hours = now.getHours().toString().padStart(2, '0');
+  let minutes = now.getMinutes().toString().padStart(2, '0');
+
+  document.getElementById("time").textContent = hours + ":" + minutes;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+<body>
+
+<div class="pda">
+  <div class="header">
+    <h1>ПДА Летописца</h1>
+    <div class="status">
+  Сигнал: <span id="signal">слабый</span> | Радиация: 
+  <span id="radiation">--</span> мкР/ч | Данные: доступны 
+</div>
+
+<div class="radiation-symbol">☢</div>
+
+<div class="pda-info">
+  <span>ЛОКАЦИЯ: Завод "Росток", ЧЗО</span>
+  <span id="time">--:--</span>
+</div>
+
+<div id="pda-message"></div>
+
+</div>
+
+<nav>
+  </nav>
+
+  <div class="main-screen">
+    <h2 class="chapter-title">Добро пожаловать, сталкер</h2>
+	
+	<div class="card">
+	<h1>Хроники Чернобыля</h1>
+    <p>
+      В данном архиве хранятся записи об истории ЧЗО, её известных личностях и важных событиях, собранные сталкером Летописцем за годы пребывания в Зоне.
+    </p>
+    <a class="button" href="chernobylcraft.html">Открыть архив →</a>
+  </div>
+	
+	<div class="card">
+	<h1>Слухи и байки</h1>
+    <p>
+      Этот архив содержит фанатские рассказы, заметки и истории,
+      подслушанные у костров, найденные в заброшенных тайниках и старых ПДА.
+    </p>
+    <a class="button" href="tvorchestvo.html">Открыть архив →</a>
+  </div>
+
+  <div class="footer">
+    ПДА-система v.0.7 | Последняя синхронизация: неизвестно
+  </div>
+</div>
+
+<script>
+function updateRadiation() {
+  // диапазон радиации (можешь менять)
+  let value = Math.floor(Math.random() * 40) + 10;
+
+  document.getElementById("radiation").textContent = value;
+}
+
+// обновлять каждые 2 секунды
+setInterval(updateRadiation, 2000);
+
+// запуск сразу при загрузке
+updateRadiation();
+</script>
+
+<script>
+function updateRadiation() {
+  let value = Math.floor(Math.random() * 60) + 5;
+  let el = document.getElementById("radiation");
+
+  el.textContent = value;
+
+  if (value < 20) {
+    el.style.color = "#8bc34a"; // безопасно
+  } else if (value < 40) {
+    el.style.color = "#d4c25a"; // средне
+  } else {
+    el.style.color = "#ff5555"; // опасно
+  }
+}
+
+setInterval(updateRadiation, 2000);
+updateRadiation();
+</script>
+
+<script>
+const messages = [
+  "Картечь: Требуются добровольцы для зачистки логов мутантов.",
+  "Калибр: Квадрат А34, что за помехи?",
+  "Штурман: А ведь я здесь уже четвёртый год торчу.",
+  "Жека: Пипл, на Склады чумовую дурь завезли. Налетаем.",
+  "Слик: Продаю казну Свободы. Не дорого.",
+  "Пионер: Вербовка в ряды Свободы. Деревня новичков.",
+  "Шут: На северном блокпосту засели ренегаты. Имейте ввиду.",
+  "Ястреб: Зона очистится. Зона перезагрузится...",
+  "Гном: Ну чё, лошьё, кто с нами тягаться будет, а?",
+  "Гектор: НИИЧАЗ скупает артефакты у всех бродяг Зоны.",
+  "Калаш: Возле насыпи опять стрельба. Эти всё собачатся.",
+  "Стёпочкин: Долг умер. СУКИ!",
+  "Торф: Новые запчасти подвезли. Шагайте в Бар.",
+];
+
+const messageBox = document.getElementById("pda-message");
+
+function showMessage() {
+  const text = messages[Math.floor(Math.random() * messages.length)];
+
+  messageBox.textContent = "> " + text;
+  messageBox.classList.add("show");
+
+  setTimeout(() => {
+    messageBox.classList.remove("show");
+  }, 5000);
+}
+
+// запуск раз в 15–30 секунд
+setInterval(showMessage, Math.random() * 10000 + 10000);
+</script>
+
+<script>
+const signalEl = document.getElementById("signal");
+
+function updateSignal() {
+  const signals = [
+    { text: "слабый", className: "signal-low" },
+    { text: "средний", className: "signal-mid" },
+    { text: "хороший", className: "signal-good" }
+  ];
+
+  const random = Math.floor(Math.random() * signals.length);
+  const signal = signals[random];
+
+  signalEl.textContent = signal.text;
+  signalEl.classList.remove(
+  "signal-good",
+  "signal-mid",
+  "signal-low"
+);
+
+signalEl.classList.add(signal.className);
+}
+
+// запуск
+updateSignal();
+setInterval(updateSignal, 10000);
+</script>
+
+</body>
+</html>

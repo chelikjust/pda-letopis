@@ -1,0 +1,41 @@
+<svg width="64" height="64" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#cfff9a" stroke-width="18"></circle>
+
+  <!-- грива -->
+  <polygon points="
+    256,105
+    310,135
+    350,190
+    375,255
+    350,330
+    300,385
+    256,405
+    212,385
+    162,330
+    137,255
+    162,190
+    202,135" fill="#cfff9a"></polygon>
+
+  <!-- лицо-вырез -->
+  <polygon points="
+    256,175
+    300,205
+    318,260
+    300,318
+    256,350
+    212,318
+    194,260
+    212,205" fill="#11170d"></polygon>
+
+  <!-- глаза -->
+  <polygon points="220,235 244,245 220,255" fill="#cfff9a"></polygon>
+  <polygon points="292,235 268,245 292,255" fill="#cfff9a"></polygon>
+
+  <!-- нос -->
+  <polygon points="256,270 275,295 237,295" fill="#cfff9a"></polygon>
+
+  <!-- пасть -->
+  <rect x="246" y="310" width="20" height="8" fill="#cfff9a"></rect>
+
+</svg>

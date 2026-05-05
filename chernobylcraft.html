@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+function updateTime() {
+  const now = new Date();
+
+  let hours = now.getHours().toString().padStart(2, '0');
+  let minutes = now.getMinutes().toString().padStart(2, '0');
+
+  document.getElementById("time").textContent = hours + ":" + minutes;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+<body>
+
+<div class="pda">
+  <div class="header">
+    <h1>Архив истории Зоны</h1>
+    <div class="status">Раздел: История | Доступ: открыт</div>
+  </div>
+  
+  <div class="pda-info">
+  <span>ЛОКАЦИЯ: Завод "Росток", ЧЗО</span>
+  <span id="time">--:--</span>
+</div>
+
+  <nav>
+    <a href="index.html">Главная</a>
+  </nav>
+
+    <div class="card">
+      <h2>☢ События</h2>
+      <p>
+	  
+      </p>
+      <a class="button" href="stories/pustota.html">Открыть запись →</a>
+    </div>
+	
+	<div class="card">
+      <h2>☢ Личности</h2>
+      <p>
+
+      </p>
+      <a class="button" href="stories/pustota.html">Открыть запись →</a>
+    </div>
+	
+	<div class="card">
+      <h2>☢ Фракции</h2>
+      <p>
+
+      </p>
+      <a class="button" href="factions.html">Открыть запись →</a>
+    </div>
+
+  <div class="footer">
+    Найдено записей: 3
+  </div>
+</div>
+
+</body>
+</html>

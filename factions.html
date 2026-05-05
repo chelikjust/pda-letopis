@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+function updateTime() {
+  const now = new Date();
+
+  let hours = now.getHours().toString().padStart(2, '0');
+  let minutes = now.getMinutes().toString().padStart(2, '0');
+
+  document.getElementById("time").textContent = hours + ":" + minutes;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+<body>
+
+<div class="pda">
+  <div class="header">
+    <h1>Фракции</h1>
+    <div class="status">Раздел: История | Доступ: открыт</div>
+  </div>
+  
+  <div class="pda-info">
+  <span>ЛОКАЦИЯ: Завод "Росток", ЧЗО</span>
+  <span id="time">--:--</span>
+</div>
+
+  <nav>
+    <a href="index.html">Главная</a>
+	<a href="chernobylcraft.html">Архив истории</a>
+  </nav>
+
+    <div class="card">
+
+  <div class="faction-header">
+    <img src="images/dolg.svg" class="small-icon" alt="">
+    <h2>Долг</h2>
+  </div>
+
+  <a class="button" href="stories/dolgstory.html">Открыть запись →</a>
+
+</div>
+	
+	<div class="card">
+
+  <div class="faction-header">
+    <img src="images/freedom.svg" class="small-icon" alt="">
+    <h2>Свобода</h2>
+  </div>
+
+  <a class="button" href="stories/dolgstory.html">Открыть запись →</a>
+
+</div>
+	
+	<div class="card">
+
+  <div class="faction-header">
+    <img src="images/diggers.svg" class="small-icon" alt="">
+    <h2>Диггеры</h2>
+  </div>
+
+  <a class="button" href="stories/dolgstory.html">Открыть запись →</a>
+
+</div>
+
+<div class="card">
+
+  <div class="faction-header">
+    <img src="images/renegades.svg" class="small-icon" alt="">
+    <h2>Ренегаты</h2>
+  </div>
+
+  <a class="button" href="stories/dolgstory.html">Открыть запись →</a>
+
+</div>
+
+  <div class="footer">
+    Найдено записей: 4
+  </div>
+</div>
+
+</body>
+</html>

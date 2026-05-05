@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script>
+function updateTime() {
+  const now = new Date();
+
+  let hours = now.getHours().toString().padStart(2, '0');
+  let minutes = now.getMinutes().toString().padStart(2, '0');
+
+  document.getElementById("time").textContent = hours + ":" + minutes;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+
+<body>
+
+<div class="pda">
+  <div class="header">
+    <h1>Архив рассказов</h1>
+    <div class="status">Раздел: Творчество | Доступ: открыт</div>
+  </div>
+  
+  <div class="pda-info">
+  <span>ЛОКАЦИЯ: Завод "Росток", ЧЗО</span>
+  <span id="time">--:--</span>
+</div>
+
+  <nav>
+    <a href="index.html">Главная</a>
+  </nav>
+
+    <div class="card">
+      <h2>☢ Под присмотром смерти (автор PyroOrc)</h2>
+      <p>
+        Мрачный рассказ о сталкере, который понял:
+        в Зоне за каждым шагом кто-то наблюдает.
+      </p>
+      <a class="button" href="stories/pod-prismotrom-smerti.html">Открыть запись →</a>
+    </div>
+	
+	<div class="card">
+      <h2>☢ Хроники Зоны (автор Kartech)</h2>
+      <p>
+        (описание)
+      </p>
+      <a class="button" href="stories/zone-chronicle.html">Открыть запись →</a>
+    </div>
+	
+	<div class="card">
+      <h2>☢ Нежданное знакомство (автор PyroOrc)</h2>
+      <p>
+        Сталкер, возвращающийся после неудачного рейда, рассчитывает только на две вещи: чистую дорогу и долгожданный отдых. Но никак не на странную аномалию, из которой нет выхода.
+      </p>
+      <a class="button" href="stories/nezhdannoe-znakomstvo.html">Открыть запись →</a>
+    </div>
+	
+	<div class="card">
+      <h2>☢ Случайная встреча (автор Kartech)</h2>
+      <p>
+        (описание)
+      </p>
+      <a class="button" href="stories/sluch-vstrecha.html">Открыть запись →</a>
+    </div>
+	
+	<div class="card">
+      <h2>☢ Чёрная собака (автор Kartech)</h2>
+      <p>
+        (описание)
+      </p>
+      <a class="button" href="stories/black-dog.html">Открыть запись →</a>
+    </div>
+
+  <div class="footer">
+    Найдено записей: 5
+  </div>
+</div>
+
+</body>
+</html>
